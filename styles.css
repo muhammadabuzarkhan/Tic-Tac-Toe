@@ -1,0 +1,100 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+.container {
+    text-align: center;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#gameBoard {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 5px;
+    margin: 20px auto;
+}
+
+.cell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #e0e0e0;
+    font-size: 2rem;
+    font-weight: bold;
+    cursor: pointer;
+    user-select: none;
+    border-radius: 4px;
+}
+
+.cell:hover {
+    background-color: #d5d5d5;
+}
+
+#gameStatus {
+    margin: 20px;
+    font-size: 1.5rem;
+}
+
+#resetButton {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#resetButton:hover {
+    background-color: #218838;
+}
+
+@media (max-width: 500px) {
+    #gameBoard {
+        grid-template-columns: repeat(3, 80px);
+        grid-template-rows: repeat(3, 80px);
+    }
+
+    .cell {
+        font-size: 1.5rem;
+    }
+}
+
+
+
+/* Style for the X */
+.tic-tac-toe .x {
+    font-size: 4rem;
+    font-weight: bold;
+    color: #00ffec; /* Bright teal for the glow */
+    background: linear-gradient(145deg, #000000, #15430c, #524747);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 10px #00ffec, 0 0 20px #7de4dd, 0 0 30px #1a2fb3;
+}
+
+/* Style for the O */
+.tic-tac-toe .o {
+    font-size: 4rem;
+    font-weight: bold;
+    color: #ff0000; /* Red color */
+    
+    background: linear-gradient(145deg, #000000, #15430c, #524747);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 10px #57377c, 0 0 20px #303838, 0 0 30px #484a54;
+}
+
+
+
+
